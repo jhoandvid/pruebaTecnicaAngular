@@ -1,0 +1,35 @@
+@import '../../../styles.scss';
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: $color-2; // un color oscuro
+    color: #fff; // texto blanco
+  
+    .logo {
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  
+    .main-nav {
+      ul {
+        list-style: none;
+        display: flex;
+        gap: 1em;
+  
+        li {
+          a {
+            color: #fff;
+            text-decoration: none;
+  
+            &:hover {
+              color: #ddd; // Cambia el color al pasar el ratón
+            }
+          }
+        }
+      }
+    }
+  }
