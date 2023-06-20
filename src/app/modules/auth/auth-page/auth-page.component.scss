@@ -1,0 +1,38 @@
+@import '../../../../styles.scss';
+
+.login-auth-page{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100vw;
+    padding-right: 33px;
+    height: 100vh;
+}
+
+.login-auth-wrapper{
+    display: flex;
+    justify-content: center;
+    background: $primary-color-white;
+    min-width: 252px;
+    min-height: 298px;
+    width: 33vw;
+    height: 90vh;
+    box-shadow: $shadow-1;
+    border-radius: $border-radius-2;
+
+}
+
+.login-auth-wrapper > h3{
+    padding-top: 10%;
+}
+
+
+@media (max-width: 400px) {
+    .login-auth-page {
+      justify-content: center;
+      height: 90vh;
+      padding: 0;
+    }
+  }
+
+
