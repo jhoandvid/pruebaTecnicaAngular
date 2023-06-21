@@ -1,13 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import * as Papa from 'papaparse';
+import { LocalStorageService } from '../../services/localStorage.service';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit{
   leastAffected:any=[];
   mostAffected:any=[];
+  isLoadInputCVS=false;
+
+  constructor(private readonly localStorageService:LocalStorageService){
+  }
+  ngOnInit(): void {
+    const dataLocalStorage=this.localStorageService.getDataLocalStorage("reportCovid");
+    console.log(dataLocalStorage);
+    if(dataLocalStorage){
+      this.isLoadInputCVS=true;
+      this.mostAndLeastAffectedStates(dataLocalStorage);
+    }
+  }
 
   public onFileChange(event: any) {
     let reader = new FileReader();
@@ -18,15 +31,14 @@ export class DashboardComponent {
       reader.onload = () => {
         let csvData = reader.result;
         let parsedData = Papa.parse(csvData as string).data;
+        this.localStorageService.setDataLocalStorage("reportCovid", parsedData);
         this.mostAndLeastAffectedStates(parsedData);
-          
       };
     }
   }
 
   mostAndLeastAffectedStates(data:any) {
     const cities:any={};
-    let result;
 
     data.forEach((city:any)=>{
       if (!isNaN(city[city.length - 1])) {

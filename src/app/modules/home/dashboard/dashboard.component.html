@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="!isLoadInputCVS">
     <div class="dashboard_row">
         <section class="dashboard_upload">
             <label for="file-upload" >
@@ -8,7 +8,7 @@
               </svg>
             </label>
             <input id="file-upload" type="file" style="display:none;" (change)="onFileChange($event)" accept=".csv">  
-            <div class="form-text dashboard_upload_text" id="basic-addon4">Upload a file to be analyzed</div>
+            <div class="form-text dashboard_upload_text text-center" id="basic-addon4">Debes subir un archivo .cvs </div>
           </section>
     </div>
 </div>
