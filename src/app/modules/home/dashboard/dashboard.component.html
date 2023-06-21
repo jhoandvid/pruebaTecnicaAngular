@@ -1,4 +1,4 @@
-<div class="container" *ngIf="!isLoadInputCVS">
+<div class="container" *ngIf="isLoadInputCVS">
     <div class="dashboard_row">
         <section class="dashboard_upload">
             <label for="file-upload" >
@@ -12,5 +12,5 @@
           </section>
     </div>
 </div>
-{{leastAffected|json}}
-{{mostAffected|json}}
+
+<app-section-info [data]="data"></app-section-info>
