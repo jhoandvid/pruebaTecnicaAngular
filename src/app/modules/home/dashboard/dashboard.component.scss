@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+  }
+
+  .bi.bi-upload.dashboard_upload_icon {
+        width: 40%;  
+        height: auto;  
+}
+
+  .dashboard_row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  
+  .text-center{
+    text-align: center;
+  }
+
+.dashboard_upload {
+  background-color: rgba(0, 0, 0, 0.05);
+  margin: 0 auto;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+.dashboard_upload_icon {
+  width: 20%;
+  height: 20%;
+  opacity: 0.5;
+}
+
+
+
