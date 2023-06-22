@@ -2,7 +2,7 @@
 
         <app-card-info  *ngFor="let city of data.leastAffected" [city]="city" [description]="'El estado con menor acumulado de muertes por el covid'"></app-card-info>
         <app-card-info  *ngFor="let city of data.mostAffected" [city]="city" [description]="'El estado con mayor acumulado de muertes por el covid'"></app-card-info>
-        <app-card-info  *ngFor="let city of data.mortalityRate" [city]="city" [description]="'El estado mas afectado por muertes de covid19 segun la tasa mas alta de casos en relación a su población total: población/total='+city.mortalityRate"></app-card-info>
+        <app-card-info  *ngFor="let city of data.mortalityRate" [city]="city" [description]="'El estado con la tasa de mortalidad mas alta por cada 1000 habitantes: '+city.mortalityRate.toFixed(2)+ '%'"></app-card-info>
  
        
   

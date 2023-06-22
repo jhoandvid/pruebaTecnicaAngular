@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as Papa from 'papaparse';
 import { LocalStorageService } from '../../services/localStorage.service';
+import { JsonPipe } from '@angular/common';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -43,6 +44,8 @@ export class DashboardComponent implements OnInit{
         let parsedData = Papa.parse(csvData as string).data;
         this.mostAndLeastAffectedStates(parsedData);
       };
+
+      window.location.reload();
     }
   }
 
@@ -68,12 +71,12 @@ export class DashboardComponent implements OnInit{
 
   
 
-    const sortedCities=Object.values(cities).map((res:any)=>({state:res.state, total:res.countDate, population:res.totalPopulation, mortalityRate: Math.round(res.totalPopulation/res.countDate)})).sort((a, b)=>a.total-b.total);
+    const sortedCities=Object.values(cities).map((res:any)=>({state:res.state, total:res.countDate, population:res.totalPopulation})).sort((a, b)=>a.total-b.total);
+
     const mortalityRate = Object.values(cities).map((res:any) => {
       let population = res.totalPopulation ? res.totalPopulation : 0;
       let countDate = res.countDate ? res.countDate : 0;
-      let mortalityRate = (population && countDate) ? Math.round(population/countDate) : 0;
-  
+      let mortalityRate = (population && countDate) ? (countDate/population)*1000 : 0;
       return {
           state: res.state ? res.state : '',
           total: countDate,
@@ -83,10 +86,9 @@ export class DashboardComponent implements OnInit{
   }).sort((a, b) => a.mortalityRate - b.mortalityRate);
     this.data.leastAffected = sortedCities.filter((city: any) => city.total === sortedCities[0].total);
     this.data.mostAffected = sortedCities.filter((city: any) => city.total === sortedCities[sortedCities.length - 1].total);
-    console.log(mortalityRate);
     this.data.mortalityRate=[mortalityRate[sortedCities.length - 1]];
-    console.log(this.data)
     this.localStorageService.setDataLocalStorage("reportCovid", this.data);
+    this.localStorageService.setDataLocalStorage("cities", mortalityRate);
     this.isLoadInputCVS=false;
 }
 
