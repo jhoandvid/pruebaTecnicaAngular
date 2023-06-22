@@ -4,8 +4,8 @@
     display: flex;
     justify-content: space-between;
     padding: 1em;
-    background-color: $color-2; // un color oscuro
-    color: #fff; // texto blanco
+    background-color: $color-3; 
+    align-items: center;
   
     .logo {
       a {
@@ -26,10 +26,22 @@
             text-decoration: none;
   
             &:hover {
-              color: #ddd; // Cambia el color al pasar el ratón
+              color: #ddd;
             }
           }
         }
       }
     }
+  }
+
+  @media (max-width: 767px) {
+
+    .main-nav {
+     display: none;
+    }
+
+    .main-header{
+      justify-content: center;
+    }
+    
   }
