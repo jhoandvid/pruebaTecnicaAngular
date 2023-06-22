@@ -16,5 +16,20 @@ export class LocalStorageService {
   return  JSON.parse(localStorage.getItem(key) || '{}');
  }
 
+ clearDataLocalStorage(){
+
+  //Obtener el usuario 
+  
+  //eliminar el usuario 
+  window.localStorage.clear();
+
+  //volver a almacenar el usuario en el localstorage
+
+ }
+
+ clearAllData(){
+  window.localStorage.clear();
+ }
+
 
 }

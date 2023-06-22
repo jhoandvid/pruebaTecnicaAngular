@@ -5,9 +5,9 @@
     <nav class="main-nav">
       <ul>
         <li></li>
-        <li><a>rojas@jhoandvid@gmail.com</a></li>
-        <li><a href="/contacto">Borrar Reporte</a></li>
-        <li><a href="/contacto">Cerrar sesión</a></li>
+        <li><a>{{user?.email}}</a></li>
+        <li *ngIf="isData"><a (click)="clearLocalStorage()">Borrar Reporte</a></li>
+        <li><a (click)="clearAllData()">Cerrar sesión</a></li>
       </ul>
     </nav>
   </header>

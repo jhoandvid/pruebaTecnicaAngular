@@ -9,7 +9,7 @@
             <button class="social-btn"><i class="uil uil-google"></i> Continuar con Google</button>
         </div>
         <div class="separator"></div>
-        <form  class="login-auth-form">
+        <form  class="login-auth-form"  (ngSubmit)="saveUser()" [formGroup]="registerForm">
             <div class="form-group">
                 <label for="email">Dirección de correo o nombre de usuario</label>
                 <input formControlName="email" type="text" placeholder="Dirección de correo o nombre de usuario" class="form-input">
@@ -20,9 +20,10 @@
             </div>
             <div class="form-steps">
                 <a class="link" href="">¿Se te ha olvidado la contraseña?</a>
+                <br>
             </div>
             <div class="form-action">
-                <button class="login social-btn">Iniciar sesión</button>
+                <button class="login btn-login social-btn" (click)="saveUser()" [disabled]="!this.registerForm.valid">Iniciar sesión</button>
             </div>
         </form>
    </div>

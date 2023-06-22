@@ -59,6 +59,7 @@ export class DonaComponent {
           label: 'Porcentaje de muertes por estado',
           data: totalDeathPercentage,
         }, // casos
+        
       ],
     };
 

@@ -139,6 +139,9 @@ input.ng-invalid.ng-touched {
     border: solid 2px red !important
 }
 
+.btn-login{
+    cursor: pointer;
+}
 
 @media (max-width: 767px) {
     .login-auth-page {
