@@ -7,7 +7,8 @@ Ejecuta ng serve para iniciar el servidor de desarrollo. Navega a http://localho
 ### Iniciar sesión
 ```En el apartedo del login se puede utilizar cualquier usuario o constraseña para poder ingresar a la aplicación, simpre y cuando sea un email valido y una contraseña mayor a 3 caracteres```
 
-      ![image](https://github.com/jhoandvid/pruebaTecnicaAngular/assets/81529247/443c7b30-bb42-47f2-9150-8f8a2e50563a)
+     ![image](https://github.com/jhoandvid/pruebaTecnicaAngular/assets/81529247/5dffbeab-1a0c-412c-aa3c-d7e5057a6ed6)
+
 ### Dashboard
    ```Para la subida de archivos en el dashboar se tiene que dar click en el icono y buscar el archivo con formato .cvs```
    
