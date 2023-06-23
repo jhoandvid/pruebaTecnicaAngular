@@ -7,7 +7,7 @@ Ejecuta ng serve para iniciar el servidor de desarrollo. Navega a http://localho
 ### Iniciar sesión
 ```En el apartedo del login se puede utilizar cualquier usuario o constraseña para poder ingresar a la aplicación, simpre y cuando sea un email valido y una contraseña mayor a 3 caracteres```
 
-     ![image](https://github.com/jhoandvid/pruebaTecnicaAngular/assets/81529247/5dffbeab-1a0c-412c-aa3c-d7e5057a6ed6)
+   ![image](https://github.com/jhoandvid/pruebaTecnicaAngular/assets/81529247/5dffbeab-1a0c-412c-aa3c-d7e5057a6ed6)
 
 ### Dashboard
    ```Para la subida de archivos en el dashboar se tiene que dar click en el icono y buscar el archivo con formato .cvs```
@@ -17,7 +17,7 @@ Ejecuta ng serve para iniciar el servidor de desarrollo. Navega a http://localho
 ### Reporte
 ```Una vez subido el archivo se mostrara la información correspondiente al analisis realizado```
 
-     ![image](https://github.com/jhoandvid/pruebaTecnicaAngular/assets/81529247/136e2bd7-386e-4430-9be0-fb255fbb139a)
+  ![image](https://github.com/jhoandvid/pruebaTecnicaAngular/assets/81529247/136e2bd7-386e-4430-9be0-fb255fbb139a)
 
 ### otras funcionalidades
 Para eliminar la información guardada basta con dar click en el boton "Borrar Reporte" y para regresar el login dar click en cerrar sesión.
