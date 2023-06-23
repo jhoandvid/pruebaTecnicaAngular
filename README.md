@@ -1,27 +1,26 @@
 
 ## CovidReport
 
-### Levantar el Proyecto
-Ejecuta ng serve para iniciar el servidor de desarrollo. Navega a http://localhost:4200/ en tu navegador. La aplicación se recargará automáticamente si realizas cambios en alguno de los archivos fuente.
+### Project Setup
+```Run ng serve to start the development server. Navigate to http://localhost:4200/ in your browser. The application will automatically reload if you make any changes to the source files.```
 
-### Iniciar sesión
-```En el apartedo del login se puede utilizar cualquier usuario o constraseña para poder ingresar a la aplicación, simpre y cuando sea un email valido y una contraseña mayor a 3 caracteres```
+### Login
+```In the login section, you can use any username or password to access the application, as long as it is a valid email and the password is longer than 3 characters.```
 
    ![image](https://github.com/jhoandvid/pruebaTecnicaAngular/assets/81529247/5dffbeab-1a0c-412c-aa3c-d7e5057a6ed6)
 
 ### Dashboard
-   ```Para la subida de archivos en el dashboar se tiene que dar click en el icono y buscar el archivo con formato .cvs```
+   ```To upload files, you need to click on the icon in the dashboard and browse for the file with the .csv format.```
    
   ![image](https://github.com/jhoandvid/pruebaTecnicaAngular/assets/81529247/abe5d2df-8201-4948-9784-814e73245b42)
 
-### Reporte
-```Una vez subido el archivo se mostrara la información correspondiente al analisis realizado```
+### Report
+```Once the file is uploaded, the corresponding information from the analysis will be displayed.```
 
   ![image](https://github.com/jhoandvid/pruebaTecnicaAngular/assets/81529247/136e2bd7-386e-4430-9be0-fb255fbb139a)
 
-### otras funcionalidades
-Para eliminar la información guardada basta con dar click en el boton "Borrar Reporte" y para regresar el login dar click en cerrar sesión.
-
+### Other Functionalities
+```To delete the saved information, simply click on the "Delete Report" button, and to return to the login, click on the "Log out" button.```
 ![image](https://github.com/jhoandvid/pruebaTecnicaAngular/assets/81529247/104ed9b1-3949-4e72-bef9-31b7896f40a0)
 
 
